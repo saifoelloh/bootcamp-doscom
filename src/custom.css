@@ -1,0 +1,77 @@
+.navbar {
+  height: 75px;
+}
+.welcome {
+  background-image: url(./assets/header.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: 50%;
+  height: 780px;
+  color: white;
+}
+.kegiatan {
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  background-color: #fff;
+}
+.kotak-tengah {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.kotak-daftar {
+  background-image: url(./assets/daftar_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  color: white;
+}
+.jadwal {
+  height: 600px;
+  padding: 100px;
+  background-color: #2b132bff;
+  color: white;
+}
+.schedule {
+  background-image: url(./assets/rute.png);
+  background-size: 48%;
+  background-repeat: no-repeat;
+  background-position-x: 20%;
+}
+.keg-kotak {
+  min-height: 7px;
+  width: 100%;
+  background-color: #000;
+}
+.judul-kegiatan {
+  background-color: #fff;
+}
+.tech-meet {
+  background-color: #ff7f2aff;
+}
+.bulat {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.75);
+}
+legend {
+  font-size: 1rem;
+}
+.kontak {
+  background-color: #1f2d3cff;
+  color: white;
+}
+.kontak-person > p {
+  margin: 0;
+}
+.lingkaran {
+  border-radius: 50%;
+}
+.footer {
+  background-color: #16222eff;
+  color: white;
+}
