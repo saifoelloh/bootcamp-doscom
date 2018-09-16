@@ -7,22 +7,23 @@ export default class Activity extends React.Component {
   render() {
     console.log(this.props.data[0]);
     return (
-      <div className="kotak-kegiatan">
+      <div>
+        <div className="warna-orange" />
         <div className="text-center p-md-5 judul-kegiatan">
-          <h1>Included</h1>
+          <h1 className="font-weight-bold mt-md-3 mb-md-0">Bootcamp Doscom</h1>
           <p>Beberapa kegiatan yang dilakukan dalam bootcamp doscom.</p>
         </div>
-        <Container className="p-md-5 p-sm-3">
-          <Row>
+        <div className="kotak-kegiatan">
+          <Row className="mx-auto">
             {this.props.data.map(datum => {
               return (
-                <Col sm={4}>
+                <Col sm={3}>
                   <Kegiatan data={datum} />
                 </Col>
               );
             })}
           </Row>
-        </Container>
+        </div>
       </div>
     );
   }

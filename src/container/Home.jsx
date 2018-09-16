@@ -13,37 +13,73 @@ class Home extends React.Component {
         title: 'Pengenalan',
         description:
           'Pengenalan apa itu komunitas doscom dan seperti apa kami.',
-        image: '',
+        image: 'https://image.ibb.co/kEUvcK/perkenalan.png',
       },
       {
         title: 'Kegiatan',
         description: 'Apa-apa saja kegiatan dan acara yang kami lakukan.',
-        image: '',
+        image: 'https://image.ibb.co/k5DMHK/kegiatan.png',
       },
       {
         title: 'Games',
         description: 'Banyak games seru dalam kegiatan bootcamp.',
-        image: '',
+        image: 'https://image.ibb.co/h7zvcK/games.png',
       },
       {
         title: 'Ilmu Baru',
         description:
           'Banyak ilmu dari para sesepuh doscom yang akan diberikan dan pastinya bermanfaat.',
+        image: 'https://preview.ibb.co/dFjiWe/ilmu.png',
+      },
+      {
+        title: '',
+        description: '',
         image: '',
       },
       {
         title: 'Teman Baru',
         description: 'Banyak teman baru yang pastinya seru-seru.',
-        image: '',
+        image: 'https://image.ibb.co/nfCRjz/temanbaru.png',
       },
       {
-        title: 'Stiker',
+        title: 'Motivasi',
         description:
           'Ada juga merchendise berupa sticker dari bootcamp dan hadiah lainya.',
+        image: 'https://image.ibb.co/neaCPz/motivasi.png',
+      },
+      {
+        title: '',
+        description: '',
         image: '',
       },
     ],
     data: [],
+    detail: [
+      [
+        {
+          title: 'Tempat',
+          description1: 'Villa taman, Bandungan, Kab. Semarang',
+          description2: '',
+        },
+        {
+          title: 'Tangal 29-30',
+          description1: 'September 2018',
+          description2: 'Hari Sabtu - Minggu',
+        },
+      ],
+      [
+        {
+          title: 'Pendaftaran',
+          description1: 'Udinus Gd. H lt.1 Lorong TU',
+          description2: 'Udinus Gd. D lt.1 Camp Doscom',
+        },
+        {
+          title: 'Kuota Terbatas',
+          description1: 'Hanya tersedia untuk 40 orang peserta',
+          description2: '',
+        },
+      ],
+    ],
   };
 
   componentDidMount() {
@@ -60,53 +96,41 @@ class Home extends React.Component {
       <div>
         <div className="welcome position-relative">
           <Header />
-          <div className="position-absolute kotak-tengah text-center">
-            <img src="../assets/logo.png" alt="" />
-            <h3>
-              Sebuah kegiatan untuk mengenal kami,
-              <br /> Dinus Open Source Community
-            </h3>
+          <div className="position-absolute kotak-pojok text-center">
+            <h1 className="font-weight-bold">Sebuah Kegiatan</h1>
+            <h4 className="font-weight-normal">
+              Untuk mengenal kami,
+              <br />
+              Dinus Open Source Comunity
+            </h4>
           </div>
         </div>
         <Activity data={this.state.act} />
         <div className="jadwal">
-          <Row style={{height: '100%'}}>
-            <Col sm={9} className="schedule">
-              <div class="kotak-tengah pl-md-5 pb-md-5">
-                <h1>Tempat Kegiatan</h1>
-                <h4>Jl. Ampel Gading, Bandungan</h4>
-              </div>
-            </Col>
-            <Col
-              sm={3}
-              className="d-flex flex-column text-right justify-content-around">
-              <div>
-                <h2>Sabtu & Minggu</h2>
-                <p>Tanggal 20.21 September 2018</p>
-              </div>
-              <div>
-                <h2>40 Orang</h2>
-                <p>Kuota Peserta Kegiatan</p>
-              </div>
-              <div>
-                <h2>Rp. 60.000</h2>
-                <p>Biaya pendaftaran</p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <div className="tech-meet p-md-5">
-          <Container className="text-light text-center">
-            <div className="lingkaran bulat mx-auto d-flex align-items-center justify-content-center">
-              <h1 className="text-dark m-0">TM</h1>
-            </div>
-            <div className="my-md-5">
-              <h1>Technical Meeting</h1>
-              <p>
-                Akan diadakan sebelum kegiatan bootcamp
-                <br /> Para peserta dimohon tetap memantau group telegram
-              </p>
-            </div>
+          <Container className="text-center">
+            <h1>Biaya Kontribusi</h1>
+            <h1 className="display-1 font-weight-bold">60K</h1>
+            <Row className="p-md-5">
+              {this.state.detail.map(datum => {
+                return (
+                  <Col sm={12} className="mt-md-3">
+                    <Row>
+                      {datum.map(data => {
+                        return (
+                          <Col sm={6}>
+                            <Container>
+                              <h2 className="font-weight-bold">{data.title}</h2>
+                              <p className="m-0">{data.description1}</p>
+                              <p>{data.description2}</p>
+                            </Container>
+                          </Col>
+                        );
+                      })}
+                    </Row>
+                  </Col>
+                );
+              })}
+            </Row>
           </Container>
         </div>
         <BootcampForm />

@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Barlow', sans-serif;
+}
 .navbar {
   height: 75px;
 }
@@ -10,11 +21,18 @@
   height: 780px;
   color: white;
 }
-.kegiatan {
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
-  background-color: #fff;
+.kotak-kegiatan {
+  padding: 100px;
+}
+.kotak-pojok {
+  position: absolute;
+  top: 80%;
+  left: 27%;
+  transform: translate(-80%, -27%);
+  background-color: #222736ff;
+  width: 30%;
+  padding: 20px;
+  color: white;
 }
 .kotak-tengah {
   position: absolute;
@@ -29,9 +47,12 @@
   padding: 50px;
   color: white;
 }
+.warna-orange {
+  height: 15px;
+  background-color: #ff802cff;
+}
 .jadwal {
-  height: 600px;
-  padding: 100px;
+  padding: 3rem;
   background-color: #2b132bff;
   color: white;
 }
@@ -41,13 +62,8 @@
   background-repeat: no-repeat;
   background-position-x: 20%;
 }
-.keg-kotak {
-  min-height: 7px;
-  width: 100%;
-  background-color: #000;
-}
 .judul-kegiatan {
-  background-color: #fff;
+  background-color: #f2f2f2ff;
 }
 .tech-meet {
   background-color: #ff7f2aff;

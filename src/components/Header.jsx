@@ -29,25 +29,39 @@ export default class Header extends React.Component {
       <div>
         <Navbar color="none" light expand="md" className="navbar">
           <NavbarBrand href="/" className="text-light">
-            reactstrap
+            <img
+              src="https://image.ibb.co/euBwHK/logo.png"
+              alt=""
+              style={{width: '20%'}}
+            />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className="text-light">Beranda</NavLink>
+                <NavLink href="#welcome" className="text-light">
+                  Beranda
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-light">Tentang</NavLink>
+                <NavLink href="#about" className="text-light">
+                  Tentang
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-light">Informasi</NavLink>
+                <NavLink href="#info" className="text-light">
+                  Informasi
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-light">Kontak</NavLink>
+                <NavLink href="#register" className="text-light">
+                  Daftar
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-light">Daftar</NavLink>
+                <NavLink href="#contact" className="text-light">
+                  Kontak
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
