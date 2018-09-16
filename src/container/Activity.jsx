@@ -7,7 +7,7 @@ export default class Activity extends React.Component {
   render() {
     console.log(this.props.data[0]);
     return (
-      <div>
+      <div id="about">
         <div className="warna-orange" />
         <div className="text-center p-md-5 judul-kegiatan">
           <h1 className="font-weight-bold mt-md-3 mb-md-0">Bootcamp Doscom</h1>

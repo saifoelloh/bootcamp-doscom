@@ -58,8 +58,8 @@ class Home extends React.Component {
       [
         {
           title: 'Tempat',
-          description1: 'Villa taman, Bandungan, Kab. Semarang',
-          description2: '',
+          description1: 'Villa taman, Bandungan,',
+          description2: 'Kab. Semarang',
         },
         {
           title: 'Tangal 29-30',
@@ -94,19 +94,19 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <div className="welcome position-relative">
+        <div id="welcome" className="welcome position-relative">
           <Header />
           <div className="position-absolute kotak-pojok text-center">
-            <h1 className="font-weight-bold">Sebuah Kegiatan</h1>
-            <h4 className="font-weight-normal">
+            <h2 className="font-weight-bold">Sebuah Kegiatan</h2>
+            <h6 className="font-weight-normal">
               Untuk mengenal kami,
               <br />
               Dinus Open Source Comunity
-            </h4>
+            </h6>
           </div>
         </div>
         <Activity data={this.state.act} />
-        <div className="jadwal">
+        <div id="info" className="jadwal">
           <Container className="text-center">
             <h1>Biaya Kontribusi</h1>
             <h1 className="display-1 font-weight-bold">60K</h1>
@@ -134,12 +134,17 @@ class Home extends React.Component {
           </Container>
         </div>
         <BootcampForm />
-        <div className="p-md-5 kontak">
+        <div id="contact" className="p-md-5 kontak">
           <Container>
             <Row>
               <Col sm={4} className="text-right">
-                <div className="lingkaran bulat mx-auto d-flex align-items-center justify-content-center" />
                 <div className="text-center kontak-person my-md-3">
+                  <img
+                    src="https://image.ibb.co/fXvhPz/kontak.png"
+                    alt=""
+                    className="mb-md-3"
+                    style={{width: '40%'}}
+                  />
                   <h3>Bayu Grafit</h3>
                   <p>
                     <small>0823-2259-7622</small>
@@ -154,8 +159,13 @@ class Home extends React.Component {
                 <p>Untuk keterangan lebih lanjut</p>
               </Col>
               <Col sm={4} className="text-left">
-                <div className="lingkaran bulat mx-auto d-flex align-items-center justify-content-center" />
                 <div className="text-center kontak-person my-md-3">
+                  <img
+                    src="https://image.ibb.co/fXvhPz/kontak.png"
+                    alt=""
+                    className="mb-md-3"
+                    style={{width: '40%'}}
+                  />
                   <h3>Ilham Haqqi</h3>
                   <p>
                     <small>0858-4238-8767</small>
@@ -172,9 +182,19 @@ class Home extends React.Component {
           <Container>
             <Row>
               <Col sm={4} className="text-right">
+                <img
+                  src="https://image.ibb.co/d9AtWe/icon_mail.png"
+                  alt=""
+                  style={{width: '10%'}}
+                />
                 sekretariat@gmail.com
               </Col>
               <Col sm={4} className="text-center">
+                <img
+                  src="https://image.ibb.co/cLnwjz/icon_website.png"
+                  alt=""
+                  style={{width: '10%'}}
+                />
                 www.doscom.org
               </Col>
               <Col sm={4} className="text-left">

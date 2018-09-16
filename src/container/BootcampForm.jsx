@@ -49,7 +49,7 @@ export default class BootcampForm extends React.Component {
   };
   render() {
     return (
-      <div className="kotak-daftar">
+      <div id="register" className="kotak-daftar">
         <Container className="p-md-5">
           <Row>
             <Col sm={8}>
