@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route path="/api/" component={Home} exact />
+          <Route path="/" component={Home} exact />
           <Route path="/list/" component={EntryList} />
         </Switch>
       </div>
