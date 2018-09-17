@@ -36,7 +36,7 @@ export default class BootcampForm extends React.Component {
       faculty: this.state.faculty,
       gender: this.state.gender,
     };
-    Axios.post('http://localhost:8000/api/', newData).then(res => {
+    Axios.post('https://broken-stallion.glitch.me/', newData).then(res => {
       this.setState({
         name: '',
         nim: '',

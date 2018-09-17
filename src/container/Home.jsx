@@ -57,11 +57,13 @@ class Home extends React.Component {
     detail: [
       [
         {
+          icon: 'faMap',
           title: 'Tempat',
           description1: 'Villa taman, Bandungan,',
           description2: 'Kab. Semarang',
         },
         {
+          icon: 'faCalendarAlt',
           title: 'Tangal 29-30',
           description1: 'September 2018',
           description2: 'Hari Sabtu - Minggu',
@@ -69,11 +71,13 @@ class Home extends React.Component {
       ],
       [
         {
+          icon: 'faAddressCard',
           title: 'Pendaftaran',
           description1: 'Udinus Gd. H lt.1 Lorong TU',
           description2: 'Udinus Gd. D lt.1 Camp Doscom',
         },
         {
+          icon: 'faBusAlt',
           title: 'Kuota Terbatas',
           description1: 'Hanya tersedia untuk 40 orang peserta',
           description2: '',
@@ -83,7 +87,7 @@ class Home extends React.Component {
   };
 
   componentDidMount() {
-    Axios.get('http://localhost:8000/').then(res => {
+    Axios.get('https://broken-stallion.glitch.me/').then(res => {
       console.log(res.data);
       this.setState({
         data: res.data,
@@ -116,9 +120,11 @@ class Home extends React.Component {
                   <Col sm={12} className="mt-md-3">
                     <Row>
                       {datum.map(data => {
+                        console.log(data.icon, '<<<<<<<<<<');
                         return (
                           <Col sm={6}>
                             <Container>
+                              <FontAwesomeIcon icon="faBusAlt" />
                               <h2 className="font-weight-bold">{data.title}</h2>
                               <p className="m-0">{data.description1}</p>
                               <p>{data.description2}</p>
@@ -190,11 +196,7 @@ class Home extends React.Component {
                 sekretariat@gmail.com
               </Col>
               <Col sm={4} className="text-center">
-                <img
-                  src="https://image.ibb.co/cLnwjz/icon_website.png"
-                  alt=""
-                  style={{width: '10%'}}
-                />
+                <FontAwesomeIcon icon="faGlobeAsia" size="lg" color="white" />
                 www.doscom.org
               </Col>
               <Col sm={4} className="text-left">
