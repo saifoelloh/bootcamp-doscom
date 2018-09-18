@@ -18,7 +18,9 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-y: 50%;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
+  height: auto;
+  min-height: 100vh;
   color: white;
 }
 .kotak-kegiatan {
