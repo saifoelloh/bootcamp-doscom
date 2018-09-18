@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import swal from 'sweetalert';
 import {
   Button,
   Col,
@@ -28,7 +29,7 @@ export default class BootcampForm extends React.Component {
   };
 
   postHandler = () => {
-    let newData = {
+    let doc = {
       name: this.state.name,
       nim: this.state.nim,
       phone: this.state.phone,
@@ -36,15 +37,27 @@ export default class BootcampForm extends React.Component {
       faculty: this.state.faculty,
       gender: this.state.gender,
     };
-    Axios.post('https://broken-stallion.glitch.me/', newData).then(res => {
-      this.setState({
-        name: '',
-        nim: '',
-        phone: '',
-        mail: '',
-        faculty: '',
-        gender: '',
-      });
+    Axios.post('https://broken-stallion.glitch.me/', doc).then(res => {
+      console.log(res, '<<<<<<<<<<<<<<');
+      if (res.data.status_code == 702) {
+        swal({
+          title: `Ada yg belum di-isi tuh gan`,
+          icon: 'error',
+        });
+      } else {
+        swal({
+          title: `Selamat Bergabung ${this.state.name}`,
+          icon: 'success',
+        });
+        this.setState({
+          name: '',
+          nim: '',
+          phone: '',
+          mail: '',
+          faculty: '',
+          gender: '',
+        });
+      }
     });
   };
   render() {
@@ -67,6 +80,7 @@ export default class BootcampForm extends React.Component {
                         value={this.state.name}
                         placeholder="Silahkan ketik disini"
                         onChange={this.changeHandler}
+                        required
                       />
                     </FormGroup>
                     <FormGroup>

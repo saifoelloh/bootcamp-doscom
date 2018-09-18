@@ -12,6 +12,7 @@ import {
   faAddressCard,
   faGlobe,
   faGlobeAsia,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {Home, BootcampForm, EntryList} from './container/index.js';
@@ -25,6 +26,7 @@ library.add(
   faBusAlt,
   faGlobe,
   faGlobeAsia,
+  faEnvelope,
 );
 
 class App extends Component {

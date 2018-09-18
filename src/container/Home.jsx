@@ -57,13 +57,13 @@ class Home extends React.Component {
     detail: [
       [
         {
-          icon: 'faMap',
+          icon: 'map',
           title: 'Tempat',
           description1: 'Villa taman, Bandungan,',
           description2: 'Kab. Semarang',
         },
         {
-          icon: 'faCalendarAlt',
+          icon: 'calendar-alt',
           title: 'Tangal 29-30',
           description1: 'September 2018',
           description2: 'Hari Sabtu - Minggu',
@@ -71,13 +71,13 @@ class Home extends React.Component {
       ],
       [
         {
-          icon: 'faAddressCard',
+          icon: 'address-card',
           title: 'Pendaftaran',
           description1: 'Udinus Gd. H lt.1 Lorong TU',
           description2: 'Udinus Gd. D lt.1 Camp Doscom',
         },
         {
-          icon: 'faBusAlt',
+          icon: 'bus-alt',
           title: 'Kuota Terbatas',
           description1: 'Hanya tersedia untuk 40 orang peserta',
           description2: '',
@@ -88,7 +88,6 @@ class Home extends React.Component {
 
   componentDidMount() {
     Axios.get('https://broken-stallion.glitch.me/').then(res => {
-      console.log(res.data);
       this.setState({
         data: res.data,
         loading: false,
@@ -120,11 +119,10 @@ class Home extends React.Component {
                   <Col sm={12} className="mt-md-3">
                     <Row>
                       {datum.map(data => {
-                        console.log(data.icon, '<<<<<<<<<<');
                         return (
                           <Col sm={6}>
                             <Container>
-                              <FontAwesomeIcon icon="faBusAlt" />
+                              <FontAwesomeIcon icon={data.icon} size="4x" />
                               <h2 className="font-weight-bold">{data.title}</h2>
                               <p className="m-0">{data.description1}</p>
                               <p>{data.description2}</p>
@@ -185,21 +183,17 @@ class Home extends React.Component {
           </Container>
         </div>
         <div className="footer p-md-5">
-          <Container>
+          <Container className="text-center">
             <Row>
-              <Col sm={4} className="text-right">
-                <img
-                  src="https://image.ibb.co/d9AtWe/icon_mail.png"
-                  alt=""
-                  style={{width: '10%'}}
-                />
-                sekretariat@gmail.com
+              <Col sm={4}>
+                <FontAwesomeIcon icon="envelope" size="lg" />
+                <h5>sekretariat@gmail.com</h5>
               </Col>
-              <Col sm={4} className="text-center">
-                <FontAwesomeIcon icon="faGlobeAsia" size="lg" color="white" />
-                www.doscom.org
+              <Col sm={4}>
+                <FontAwesomeIcon icon="globe-asia" size="lg" color="white" />
+                <h5>www.doscom.org</h5>
               </Col>
-              <Col sm={4} className="text-left">
+              <Col sm={4}>
                 <a
                   href="https://www.facebook.com/groups/doscomedia/"
                   target="_blank"
@@ -220,7 +214,6 @@ class Home extends React.Component {
                 </a>
               </Col>
             </Row>
-            <span />
           </Container>
         </div>
       </div>
